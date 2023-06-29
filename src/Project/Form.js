@@ -17,7 +17,7 @@ export default function Form({ onFormSubmitted }) {
   return (
     <form onSubmit={dataHandler}>
       <div className="form">
-        <label>
+        <label> 
           Topic
           <input type="text" name="Topic/" />
         </label>
