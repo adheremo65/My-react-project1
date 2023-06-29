@@ -8,6 +8,7 @@ export default function Header() {
   function formHandler() {
     return dialogRef.current.showModal();
   }
+  const onFormSubmitted = () => dialogRef.current.close();
 
   return (
     <div className="header">
@@ -22,7 +23,7 @@ export default function Header() {
         <button>save</button>
       </label>
       <dialog ref={dialogRef}>
-        <Form />
+        <Form onFormSubmitted={onFormSubmitted} />
       </dialog>
     </div>
   );

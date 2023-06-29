@@ -2,7 +2,7 @@ import React from "react";
 import "./Form.css";
 import { useState } from "react";
 
-export default function Form() {
+export default function Form({ onFormSubmitted }) {
   const dataHandler = (event) => {
     event.preventDefault();
     const formData = Object.fromEntries(new FormData(event.target));
@@ -10,7 +10,9 @@ export default function Form() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
-    });
+    })
+      .then((res) => res.json())
+      .then((submitedInfo) => onFormSubmitted(submitedInfo));
   };
   return (
     <form onSubmit={dataHandler}>
