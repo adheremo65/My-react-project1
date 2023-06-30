@@ -19,7 +19,11 @@ export default function Form({ onFormSubmitted }) {
       <div className="form">
         <label>
           Topic
-          <input placeholder="Topic" type="text" name="Topic" />
+          <select name="Topic">
+            <option>CSS</option>
+            <option>JS</option>
+            <option>React</option>
+          </select>
         </label>
         <br />
         <label>
@@ -39,7 +43,7 @@ export default function Form({ onFormSubmitted }) {
         <br />
         <label>
           Link
-          <input type="text" name="Script" href=""/>
+          <input type="text" name="Script" href="" />
         </label>
       </div>
       <button type="submit">save</button>
