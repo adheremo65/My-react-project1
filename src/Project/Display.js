@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import "./Form.css";
 export default function Display() {
   const [listItem, setListItem] = useState([]);
   useEffect(() => {
@@ -20,5 +21,5 @@ export default function Display() {
       <h1>{item.Script}</h1>
     </section>
   ));
-  return <div>{items}</div>;
+  return <div className="form">{items}</div>;
 }
