@@ -10,13 +10,14 @@ export default function Display() {
       setListItem(listData);
     }
     list();
-  });
+  }, []);
 
   const items = listItem.map((item) => (
     <section key={item.id}>
       <header>{item.Topic}</header>
       <h1>{item.Title}</h1>
       <p>{item.Content}</p>
+      <h1>{item.Script}</h1>
     </section>
   ));
   return <div>{items}</div>;

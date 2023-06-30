@@ -19,28 +19,27 @@ export default function Form({ onFormSubmitted }) {
       <div className="form">
         <label>
           Topic
-          <input placeholder="Topic" type="text" name="Topic/" />
+          <input placeholder="Topic" type="text" name="Topic" />
         </label>
+        <br />
         <label>
           Title
           <input type="text" placeholder="Title" name="Title" />
         </label>
+        <br />
         <label>
           Content
+          <br></br>
           <textarea
             type="text"
             placeholder="add your note here"
             name="Content"
           ></textarea>
         </label>
+        <br />
         <label>
-          <label htmlFor="imageUpload">Upload Image:</label>
-          <input
-            type="file"
-            id="imageUpload"
-            name="imageUpload"
-            accept="image/*"
-          />
+          Link
+          <input type="text" name="Script" href=""/>
         </label>
       </div>
       <button type="submit">save</button>
