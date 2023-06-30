@@ -4,6 +4,12 @@ import { useRef } from "react";
 import "./Form.css";
 
 export default function Header() {
+  const searchBar = (e) => {
+    const barValue = e.target.value;
+    console.log(barValue);
+    return barValue;
+  };
+
   const dialogRef = useRef(null);
   function formHandler() {
     return dialogRef.current.showModal();
@@ -14,7 +20,12 @@ export default function Header() {
     <div className="header">
       <p>Simple Note Taking App</p>
       <label>
-        <input type="text" name="search" placeholder="search" />
+        <input
+          onChange={searchBar}
+          type="text"
+          name="search"
+          placeholder="search"
+        />
       </label>
       <label>
         <button onClick={formHandler}>ADD+</button>
