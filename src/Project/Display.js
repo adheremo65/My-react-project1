@@ -4,14 +4,21 @@ export default function Display() {
   const [listItem, setListItem] = useState([]);
   useEffect(() => {
     const list = () => {
-      fetch("http://localhost:3000/Note").then((res) => res.json());
-    };
-    async function list() {
-      const listData = await list();
-      setListItem(listData);
-    }
-    list();
-  }, []);
+      const fetch = () =>
+        fetch("http://localhost:3000/Note").then((res) => res.json());
 
-  return <div>{listItem}</div>;
+      async function list() {
+        const listData = await fetch();
+        setListItem(listData);
+      }
+      list();
+    };
+  }, []);
+  const items = listItem.map((item) => (
+    <section>
+      <header>{item.Topic}</header>
+      <h1>{item.Title}</h1>
+    </section>
+  ));
+  return <div>{items}</div>;
 }
