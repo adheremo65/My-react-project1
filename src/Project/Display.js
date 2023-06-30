@@ -14,8 +14,9 @@ export default function Display() {
 
   const items = listItem.map((item) => (
     <section key={item.id}>
-      <header>{item.Title}</header>
-      <h1>{item.Topic}</h1>
+      <header>{item.Topic}</header>
+      <h1>{item.Title}</h1>
+      <p>{item.Content}</p>
     </section>
   ));
   return <div>{items}</div>;

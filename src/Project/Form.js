@@ -17,17 +17,21 @@ export default function Form({ onFormSubmitted }) {
   return (
     <form onSubmit={dataHandler}>
       <div className="form">
-        <label> 
+        <label>
           Topic
-          <input type="text" name="Topic/" />
+          <input placeholder="Topic" type="text" name="Topic/" />
         </label>
         <label>
           Title
-          <input type="text" placeholder="" name="Title" />
+          <input type="text" placeholder="Title" name="Title" />
         </label>
         <label>
           Content
-          <textarea></textarea>
+          <textarea
+            type="text"
+            placeholder="add your note here"
+            name="Content"
+          ></textarea>
         </label>
         <label>
           <label htmlFor="imageUpload">Upload Image:</label>
