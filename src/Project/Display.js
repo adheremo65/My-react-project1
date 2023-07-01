@@ -1,16 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
+
 import "./Form.css";
 export default function Display() {
   const [listItem, setListItem] = useState([]);
-  const [value, setValue] = useState("");
-
-  
-  const searchBar = (e) => {
-    const barValue = e.target.value;
-    console.log(barValue);
-    setValue(barValue);
-  };
 
   useEffect(() => {
     const output = () =>

@@ -2,16 +2,14 @@ import React, { useState } from "react";
 import Form from "./Form";
 import { useRef } from "react";
 import "./Form.css";
-import Display from "./Display";
 
-export default function Header({ listItem,value,searchBar }) {
-
-  // const [value, setValue] = useState("");
-  // const searchBar = (e) => {
-  //   const barValue = e.target.value;
-  //   console.log(barValue);
-  //   setValue(barValue);
-  // };
+export default function Header({ listItem }) {
+  const [value, setValue] = useState("");
+  const searchBar = (e) => {
+    const barValue = e.target.value;
+    console.log(barValue);
+    setValue(barValue);
+  };
 
   const dialogRef = useRef(null);
   function formHandler() {
@@ -21,7 +19,7 @@ export default function Header({ listItem,value,searchBar }) {
 
   return (
     <div className="header">
-      <p>Simple Note Taking App</p>
+      <img src="./411485.jpg"></img>
       <label>
         <input
           onChange={searchBar}
