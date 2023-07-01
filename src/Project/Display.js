@@ -14,7 +14,7 @@ export default function Display() {
       setListItem(listData);
     }
     list();
-  }, []);
+  }, [listItem]);
 
   const items = listItem.map((item) => <Item item={item} key={item.id} />);
 

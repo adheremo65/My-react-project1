@@ -16,7 +16,7 @@ export default function Header() {
       setListItem(listData);
     }
     list();
-  }, []);
+  }, [listItem]);
 
   const [value, setValue] = useState("");
   const searchBar = (e) => {
