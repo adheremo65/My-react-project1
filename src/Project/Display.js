@@ -21,6 +21,10 @@ export default function Display() {
       <h1>{item.Title}</h1>
       <p>{item.Content}</p>
       <h1>{item.Script}</h1>
+      <span>
+        <button>edit</button>
+        <button>delete</button>
+      </span>
     </section>
   ));
 
