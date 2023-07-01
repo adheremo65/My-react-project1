@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Item from "./Item";
 
 import "./Form.css";
 export default function Display() {
@@ -15,18 +16,15 @@ export default function Display() {
     list();
   }, []);
 
-  const items = listItem.map((item) => (
-    <section key={item.id}>
-      <header>{item.Topic}</header>
-      <h1>{item.Title}</h1>
-      <p>{item.Content}</p>
-      <h1>{item.Script}</h1>
-      <span>
-        <button>edit</button>
-        <button>delete</button>
-      </span>
-    </section>
-  ));
+  const items = listItem.map((item) => <Item />);
+
+  function handleDelete() {
+    fetch(`http://localhost:3000/Note/${listItem.id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((updated) => console.log(updated));
+  }
 
   return <div className="center">{items}</div>;
 }
