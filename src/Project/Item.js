@@ -14,7 +14,7 @@ export default function Item({ item }) {
       method: "DELETE",
     })
       .then((res) => res.json())
-      .then((updated) => setListItem(updated));
+      .then((deleted) => setListItem(deleted));
   }
   function toggleEdit() {
     setEditItem(!editItem);
@@ -32,7 +32,9 @@ export default function Item({ item }) {
           Script: script,
         },
         setEditItem(!editItem)
-      ),
+      )
+        .then((res) => res.json())
+        .then((updatedlist) => setListItem(updatedlist)),
     });
   }
 
