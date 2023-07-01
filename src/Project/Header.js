@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Form from "./Form";
 import { useRef } from "react";
 import "./Form.css";
+import NoteLogo from "./NoteLogo.jpg";
 
 export default function Header({ listItem }) {
   const [value, setValue] = useState("");
@@ -18,10 +19,15 @@ export default function Header({ listItem }) {
   const onFormSubmitted = () => dialogRef.current.close();
 
   return (
-    <div className="header">
+    <div className="center">
       <br></br>
       <br></br>
-      <img src="411485.jpg" alt="Simple Note Taking App"></img>
+      <img
+        className="center"
+        style={{ width: "50px" }}
+        src={NoteLogo}
+        alt="Simple Note Taking App"
+      ></img>
       <br></br>
       <br></br>
       <label>
