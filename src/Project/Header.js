@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from "./Form";
 import { useRef } from "react";
 import "./Form.css";
+import Display from "./Display";
 
-export default function Header() {
-  const searchBar = (e) => {
-    const barValue = e.target.value;
-    console.log(barValue);
-    return barValue;
-  };
+export default function Header({ listItem,value,searchBar }) {
+
+  // const [value, setValue] = useState("");
+  // const searchBar = (e) => {
+  //   const barValue = e.target.value;
+  //   console.log(barValue);
+  //   setValue(barValue);
+  // };
 
   const dialogRef = useRef(null);
   function formHandler() {
@@ -25,6 +28,7 @@ export default function Header() {
           type="text"
           name="search"
           placeholder="search"
+          value={value}
         />
       </label>
       <label>

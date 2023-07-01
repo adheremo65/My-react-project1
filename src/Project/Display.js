@@ -3,6 +3,15 @@ import { useState, useEffect } from "react";
 import "./Form.css";
 export default function Display() {
   const [listItem, setListItem] = useState([]);
+  const [value, setValue] = useState("");
+
+  
+  const searchBar = (e) => {
+    const barValue = e.target.value;
+    console.log(barValue);
+    setValue(barValue);
+  };
+
   useEffect(() => {
     const output = () =>
       fetch("http://localhost:3000/Note").then((res) => res.json());
@@ -21,5 +30,6 @@ export default function Display() {
       <h1>{item.Script}</h1>
     </section>
   ));
+
   return <div className="form">{items}</div>;
 }
