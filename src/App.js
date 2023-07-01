@@ -1,6 +1,7 @@
 import Header from "./Project/Header";
 import Display from "./Project/Display";
 import React from "react";
+import Form from "./Project/Form";
 import { Route, Switch, NavLink } from "react-router-dom";
 
 const NavStyles = {
@@ -30,6 +31,7 @@ function NavBar() {
       >
         Home
       </NavLink>
+
       <NavLink
         to="/Display"
         exact
@@ -37,6 +39,15 @@ function NavBar() {
         activeStyle={{ background: "darkblue" }}
       >
         Notes
+      </NavLink>
+      <NavLink
+        styleed={centered}
+        to="/Form"
+        exact
+        style={NavStyles}
+        activeStyle={{ background: "darkblue" }}
+      >
+        Form
       </NavLink>
     </div>
   );
@@ -47,11 +58,14 @@ function App() {
     <div>
       <NavBar />
       <Switch>
-        <Route path="/Header">
+        <Route exact path="/Header">
           <Header />
         </Route>
         <Route exact path="/Display">
           <Display />
+        </Route>
+        <Route exact path="/Form">
+          <Form />
         </Route>
       </Switch>
     </div>

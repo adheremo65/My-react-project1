@@ -4,6 +4,7 @@ import { useRef } from "react";
 import "./Form.css";
 import NoteLogo from "./NoteLogo.jpg";
 import { useEffect } from "react";
+import Item from "./Item";
 
 export default function Header() {
   const [listItem, setListItem] = useState([]);
@@ -34,18 +35,7 @@ export default function Header() {
   }
   const onFormSubmitted = () => dialogRef.current.close();
 
-  const items = filteditems.map((item) => (
-    <section key={item.id}>
-      <header>{item.Topic}</header>
-      <h1>{item.Title}</h1>
-      <p>{item.Content}</p>
-      <h1>{item.Script}</h1>
-      <span>
-        <button>edit</button>
-        <button>delete</button>
-      </span>
-    </section>
-  ));
+  const items = filteditems.map((item) => <Item item={item} key={item.id} />);
 
   return (
     <div className="form">
