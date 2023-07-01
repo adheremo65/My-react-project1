@@ -19,7 +19,11 @@ export default function Header({ listItem }) {
 
   return (
     <div className="header">
-      <img src="./411485.jpg"></img>
+      <br></br>
+      <br></br>
+      <img src="411485.jpg" alt="Simple Note Taking App"></img>
+      <br></br>
+      <br></br>
       <label>
         <input
           onChange={searchBar}
