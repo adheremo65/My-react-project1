@@ -19,7 +19,7 @@ export default function Header({ listItem }) {
   const onFormSubmitted = () => dialogRef.current.close();
 
   return (
-    <div className="center">
+    <div className="form">
       <br></br>
       <br></br>
       <img

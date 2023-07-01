@@ -24,5 +24,5 @@ export default function Display() {
     </section>
   ));
 
-  return <div className="form">{items}</div>;
+  return <div className="center">{items}</div>;
 }

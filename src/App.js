@@ -12,10 +12,17 @@ const NavStyles = {
   color: "white",
 };
 
+const centered = {
+  display: "flex",
+  justifycontent: "center",
+  alignitems: "center",
+};
+
 function NavBar() {
   return (
     <div>
       <NavLink
+        styleed={centered}
         to="/Header"
         exact
         style={NavStyles}
