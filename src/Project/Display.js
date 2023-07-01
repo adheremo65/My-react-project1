@@ -16,10 +16,10 @@ export default function Display() {
     list();
   }, []);
 
-  const items = listItem.map((item) => <Item />);
+  const items = listItem.map((item) => <Item item={item} key={item.id} />);
 
   function handleDelete() {
-    fetch(`http://localhost:3000/Note/${listItem.id}`, {
+    fetch(`http://localhost:3000/Note/${items.id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
