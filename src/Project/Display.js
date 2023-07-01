@@ -15,9 +15,6 @@ export default function Display() {
     }
     list();
   }, []);
-
-  const items = listItem.map((item) => <Item item={item} key={item.id} />);
-
   function handleDelete() {
     fetch(`http://localhost:3000/Note/${items.id}`, {
       method: "DELETE",
@@ -25,6 +22,9 @@ export default function Display() {
       .then((res) => res.json())
       .then((updated) => console.log(updated));
   }
+  const items = listItem.map((item) => (
+    <Item handleDelete={handleDelete} item={item} key={item.id} />
+  ));
 
   return <div className="center">{items}</div>;
 }

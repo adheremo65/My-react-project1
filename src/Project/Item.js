@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Item({ item }) {
+export default function Item({ item, handleDelete }) {
   return (
     <section key={item.id}>
       <header>{item.Topic}</header>
@@ -9,7 +9,7 @@ export default function Item({ item }) {
       <h1>{item.Script}</h1>
       <span>
         <button>edit</button>
-        <button>delete</button>
+        <button onClick={handleDelete}>delete</button>
       </span>
     </section>
   );
