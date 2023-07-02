@@ -51,6 +51,7 @@ export default function Header() {
       <br></br>
       <label>
         <input
+          className="flex"
           onChange={searchBar}
           type="text"
           name="search"
@@ -59,11 +60,11 @@ export default function Header() {
         />
       </label>
       <label>
-        <button onClick={formHandler}>ADD+</button>
+        <button className="flex" onClick={formHandler}>
+          ADD+
+        </button>
       </label>
-      <label>
-        <button>save</button>
-      </label>
+
       <dialog ref={dialogRef}>
         <Form onFormSubmitted={onFormSubmitted} />
       </dialog>

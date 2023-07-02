@@ -11,6 +11,9 @@ const NavStyles = {
   background: "blue",
   textDecoration: "none",
   color: "white",
+  // display: "flex",
+  justifycontent: "center",
+  alignitems: "center",
 };
 
 const centered = {
@@ -23,7 +26,7 @@ function NavBar() {
   return (
     <div>
       <NavLink
-        styleed={centered}
+        // styleed={centered}
         to="/Header"
         exact
         style={NavStyles}
@@ -36,7 +39,7 @@ function NavBar() {
         to="/Display"
         exact
         style={NavStyles}
-        activeStyle={{ background: "darkblue" }}
+        activeStyle={{ background: "darkgreen" }}
       >
         Notes
       </NavLink>
@@ -45,7 +48,7 @@ function NavBar() {
         to="/Form"
         exact
         style={NavStyles}
-        activeStyle={{ background: "darkblue" }}
+        activeStyle={{ background: "lightblue" }}
       >
         Form
       </NavLink>

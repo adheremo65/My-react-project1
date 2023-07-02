@@ -23,7 +23,7 @@ export default function Item({ item }) {
     e.preventDefault();
     fetch(`http://localhost:3000/Note/${item.id}`, {
       method: "PATCH",
-      headers: { "Content-Type": "application/json" },
+      headers: {"Content-Type": "application/json"},
       body: JSON.stringify(
         {
           Topic: topic,
@@ -32,9 +32,9 @@ export default function Item({ item }) {
           Script: script,
         },
         setEditItem(!editItem)
-      )
-        .then((res) => res.json())
-        .then((updatedlist) => setListItem(updatedlist)),
+      ),
+      // .then((res) => res.json())
+      // .then((updatedlist) => setListItem(updatedlist)),
     });
   }
 

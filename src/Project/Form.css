@@ -1,16 +1,16 @@
 .form{
     
-        background-color: #ffffff;
+        background-color:orange;
         border: 1px solid #e0e0e0;
         border-radius: 4px;
         padding: 20px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        width: 300px; 
+        width: 500px; 
         margin: 0 ;
-        /* display: flex;
+        display: flex;
         justify-content : center;
         align-items: center;
-        flex-direction: column; */
+        flex-direction: column;
       
 }
 .center {
@@ -19,3 +19,6 @@
         align-items: center;
         flex-direction: column;
       }
+.flex{
+        flex-direction: row;
+}
