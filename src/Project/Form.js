@@ -34,6 +34,7 @@ export default function Form({ onFormSubmitted }) {
           Content
           <br></br>
           <textarea
+            
             type="text"
             placeholder="add your note here"
             name="Content"
@@ -45,7 +46,9 @@ export default function Form({ onFormSubmitted }) {
           <input type="text" name="Script" href="" />
         </label>
       </div>
-      <button type="submit">save</button>
+      <button type="submit">
+        save
+      </button>
     </form>
   );
 }

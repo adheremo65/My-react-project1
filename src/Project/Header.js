@@ -22,7 +22,7 @@ export default function Header() {
   const [value, setValue] = useState("");
   const searchBar = (e) => {
     const barValue = e.target.value;
-    console.log(barValue);
+
     setValue(barValue);
   };
   const filteditems = listItem.filter((item) =>
