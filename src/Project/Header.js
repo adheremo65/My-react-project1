@@ -47,11 +47,14 @@ export default function Header() {
         alt="Simple Note Taking App"
       ></img>
       <br></br>
-      <header>Short-Note-Taking-APP</header>
+      <header style={{ color: "yellow", backgroundColor: "black" }}>
+        Short-Note-Taking-APP
+      </header>
       <br></br>
       <span>
         <label>
           <input
+            style={{ background: "lightblue" }}
             className="flex"
             onChange={searchBar}
             type="text"
@@ -61,7 +64,11 @@ export default function Header() {
           />
         </label>
         <label>
-          <button className="flex" onClick={formHandler}>
+          <button
+            style={{ background: "lightblue" }}
+            className="flex"
+            onClick={formHandler}
+          >
             ADD+
           </button>
         </label>

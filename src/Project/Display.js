@@ -19,7 +19,7 @@ export default function Display() {
   const items = listItem.map((item) => <Item item={item} key={item.id} />);
 
   return (
-    <div style={{ background: "orange" }} className="note-card">
+    <div style={{ background: "darkgreen" }} className="note-card">
       {items}
     </div>
   );

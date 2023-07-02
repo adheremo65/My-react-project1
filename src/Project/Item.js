@@ -41,12 +41,16 @@ export default function Item({ item }) {
   return !editItem ? (
     <section key={item.id}>
       <header>{item.Topic}</header>
-      <h1>{item.Title}</h1>
+      <title>{item.Title}</title>
       <p>{item.Content}</p>
-      <h1>{item.Script}</h1>
+      <h3>{item.Script}</h3>
       <span>
-        <button onClick={toggleEdit}>edit</button>
-        <button onClick={handleDelete}>delete</button>
+        <button style={{ background: "lightblue" }} onClick={toggleEdit}>
+          edit
+        </button>
+        <button style={{ background: "lightblue" }} onClick={handleDelete}>
+          delete
+        </button>
       </span>
     </section>
   ) : (
