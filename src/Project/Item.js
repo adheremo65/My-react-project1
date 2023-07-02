@@ -23,7 +23,7 @@ export default function Item({ item }) {
     e.preventDefault();
     fetch(`http://localhost:3000/Note/${item.id}`, {
       method: "PATCH",
-      headers: {"Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(
         {
           Topic: topic,
@@ -50,7 +50,7 @@ export default function Item({ item }) {
       </span>
     </section>
   ) : (
-    <form onSubmit={handleUpdate}>
+    <form className="card-note" onSubmit={handleUpdate}>
       <label>
         Topic
         <select

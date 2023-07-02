@@ -18,5 +18,9 @@ export default function Display() {
 
   const items = listItem.map((item) => <Item item={item} key={item.id} />);
 
-  return <div className="form">{items}</div>;
+  return (
+    <div style={{ background: "orange" }} className="note-card">
+      {items}
+    </div>
+  );
 }

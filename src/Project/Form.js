@@ -15,10 +15,10 @@ export default function Form({ onFormSubmitted }) {
   };
   return (
     <form onSubmit={dataHandler}>
-      <div>
+      <div style={{ background: "darkgreen" }} className="note-card">
         <label>
           Topic
-          <select name="Topic">
+          <select className="note-card-topic" name="Topic">
             <option>CSS</option>
             <option>JS</option>
             <option>React</option>
@@ -27,14 +27,19 @@ export default function Form({ onFormSubmitted }) {
         <br />
         <label>
           Title
-          <input type="text" placeholder="Title" name="Title" />
+          <input
+            className="note-card-title"
+            type="text"
+            placeholder="Title"
+            name="Title"
+          />
         </label>
         <br />
         <label>
           Content
           <br></br>
           <textarea
-            
+            className="note-card__textarea"
             type="text"
             placeholder="add your note here"
             name="Content"
@@ -46,9 +51,7 @@ export default function Form({ onFormSubmitted }) {
           <input type="text" name="Script" href="" />
         </label>
       </div>
-      <button type="submit">
-        save
-      </button>
+      <button type="submit">save</button>
     </form>
   );
 }

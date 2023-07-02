@@ -38,7 +38,7 @@ export default function Header() {
   const items = filteditems.map((item) => <Item item={item} key={item.id} />);
 
   return (
-    <div className="form">
+    <div style={{ background: "lightgreen" }} className="note-card">
       <br></br>
       <img
         className="center"

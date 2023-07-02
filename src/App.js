@@ -68,7 +68,7 @@ function App() {
           <Display />
         </Route>
         <Route exact path="/Form">
-          <Form />
+          <Form  />
         </Route>
       </Switch>
     </div>
