@@ -43,7 +43,7 @@ export default function Item({ item }) {
       <header>{item.Topic}</header>
       <title>{item.Title}</title>
       <p>{item.Content}</p>
-      <h3>{item.Script}</h3>
+      <h4>{item.Script}</h4>
       <span>
         <button style={{ background: "lightblue" }} onClick={toggleEdit}>
           edit

@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+Simple Frontend(JS/React/CSS) Brief Note Taking App
+The main motivation of creating this app is the passion to learn everyday and add some major concepts learned in the most brief way possible.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple frontend major tools note-taking app that uses a JSON file as a backend for storing and retrieving notes. The app allows users to create, read, update, and delete notes using a user-friendly command line interface.
 
-## Available Scripts
+Requirements
+To run this application, you will need the following
 
-In the project directory, you can run:
+Installation
+Clone the repository or download the source code. Navigate to the project directory Open a terminal or command prompt
 
-### `npm start`
+Run the following command to start the app:
+Run the db.json server (json-server db--watch db.json) npm start to the directory in the command line
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+About the App
+The app has three routes:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Home: 1.which is the main route to find the list of availble notes with a search bar which allows to filter based on the title of the subject. 2. Add+ button which enables to add and save new notes. 3.For each note card there is an option to edit or delete. Notes: This is a route to see all availble list of note cards which does no functionality of edit or delete. Form: is a route to show just the note addition form with no functionality since the main route(home) holds the functionality
 
-### `npm test`
+JSON File Format The app uses a JSON file (notes.json) as the backend for storing notes. Each note is represented by a JSON object with the following structure:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+json Copy code { "id": 1, "topic":"topic" "title": "Note Title", "content": "Note Content" "script": "source link"
 
-### `npm run build`
+} The id field is a unique identifier for each note. The topic field let's you select from JS/Css/React topics to add The title field represents the note's title, and the content field contains the note's content.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Contributing
+Contributions are welcome! If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request on the GitHub repository.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Acknowledgments
+This app was developed as a learning exercise. I would like to appercite my instructors for their help
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+More to the app
+This app is very limited to a brief options of CSS/React/Js due to a time limit. In the future it can be more advanced by includeing sorting option,date tracking and more options to add like file reciver and pictures.
