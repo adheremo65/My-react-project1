@@ -40,7 +40,6 @@ export default function Header() {
   return (
     <div className="form">
       <br></br>
-      <br></br>
       <img
         className="center"
         style={{ width: "50px" }}
@@ -48,23 +47,25 @@ export default function Header() {
         alt="Simple Note Taking App"
       ></img>
       <br></br>
+      <header>Short-Note-Taking-APP</header>
       <br></br>
-      <label>
-        <input
-          className="flex"
-          onChange={searchBar}
-          type="text"
-          name="search"
-          placeholder="search"
-          value={value}
-        />
-      </label>
-      <label>
-        <button className="flex" onClick={formHandler}>
-          ADD+
-        </button>
-      </label>
-
+      <span>
+        <label>
+          <input
+            className="flex"
+            onChange={searchBar}
+            type="text"
+            name="search"
+            placeholder="search"
+            value={value}
+          />
+        </label>
+        <label>
+          <button className="flex" onClick={formHandler}>
+            ADD+
+          </button>
+        </label>
+      </span>
       <dialog ref={dialogRef}>
         <Form onFormSubmitted={onFormSubmitted} />
       </dialog>
